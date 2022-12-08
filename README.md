@@ -48,6 +48,8 @@ There are a few possible solutions:
   Fedora 35 with gnome-shell-41.1 and Xorg
 * 12 Jun 2022: [42](42/) **PASS** on
   Fedora 36 with gnome-shell-42.2 and Xorg
+* 12 Dec 2022: [43](43/) **PASS** on
+  Fedora 36 with gnome-shell-43.1 and Xorg
 
 ## Change Log
 
@@ -67,21 +69,20 @@ There are a few possible solutions:
 ### [42](42/)
 * Update `shell-version` and description to be more comprehensive
 
+### [43](43/)
+* Update `shell-version` in `metadata.json`
+
 ## Relevant Code
 
 See `js/ui/keyboard.js`. Here are links for some versions after 3.36:
 
-* <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/main/js/ui/keyboard.js>
-* <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/gnome-42/js/ui/keyboard.js#L1174>
-  <!-- 8dc0ca5eebdeda668418f02cd544b19589872fc6 -->
-* <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/gnome-41/js/ui/keyboard.js#L1164>
-  <!-- 040a5d34d7a5601ad2a2f622fd9a393c5e08be5f -->
-* <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/gnome-40/js/ui/keyboard.js#L1167>
-  <!-- 821ff3bb887cfbbc080dc737b6084282213d0e7b -->
-* <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/gnome-3-38/js/ui/keyboard.js#L1129>
-  <!-- cf9d73ed5d316093ad7284ce5df95bce51409f28 -->
-* <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/gnome-3-36/js/ui/keyboard.js#L1130>
-  <!-- 40a003e5acaddb74ddd3f02294b0b4bc01ac1d3f -->
+* main: <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/main/js/ui/keyboard.js>
+* gnome-43: <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/d2cbd453077b3395d17ba91744d97550f43728d9/js/ui/keyboard.js#L1213>
+* gnome-42: <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/8dc0ca5eebdeda668418f02cd544b19589872fc6/js/ui/keyboard.js#L1174>
+* gnome-41: <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/040a5d34d7a5601ad2a2f622fd9a393c5e08be5f/js/ui/keyboard.js#L1164>
+* gnome-40: <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/821ff3bb887cfbbc080dc737b6084282213d0e7b/js/ui/keyboard.js#L1167>
+* gnome-3-38: <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/cf9d73ed5d316093ad7284ce5df95bce51409f28/js/ui/keyboard.js#L1129>
+* gnome-3-36: <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/40a003e5acaddb74ddd3f02294b0b4bc01ac1d3f/js/ui/keyboard.js#L1130>
 
 The structure of code is:
 ```js
