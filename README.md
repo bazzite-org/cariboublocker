@@ -10,6 +10,11 @@ There are some naming changes in GNOME Shell, so the original project by keringa
 
 ## Install
 
+Install this extension using one of the following ways. If your GNOME Shell version is higher than this extension is configured to support, you can still try this extension following
+[Installing on high GNOME Shell version](#installing-on-high-gnome-shell-version) below.
+
+Update for GNOME Shell 44 (Fedora 38): it looks like you need to restart GNOME Shell after enabling or disabling this extension.
+
 ### Way 1: use extensions.gnome.org
 This extension is available at the official GNOME Shell Extensions website:
 <https://extensions.gnome.org/extension/3222/block-caribou-36/>
@@ -49,7 +54,9 @@ There are a few possible solutions:
 * 12 Jun 2022: [42](42/) **PASS** on
   Fedora 36 with gnome-shell-42.2 and Xorg
 * 12 Dec 2022: [43](43/) **PASS** on
-  Fedora 36 with gnome-shell-43.1 and Xorg
+  Fedora 37 with gnome-shell-43.1 and Xorg
+* 4 Jun 2023: [44](44/) **PASS** on
+  Fedora 38 with gnome-shell-44.0 and Xorg
 
 ## Change Log
 
@@ -72,11 +79,15 @@ There are a few possible solutions:
 ### [43](43/)
 * Update `shell-version` in `metadata.json`
 
+### [44](44/)
+* Update `shell-version` in `metadata.json`
+
 ## Relevant Code
 
 See `js/ui/keyboard.js`. Here are links for some versions after 3.36:
 
 * main: <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/main/js/ui/keyboard.js>
+* gnome-44: <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/63904a09bf34f95c23de711fda02c2c6bfa56e4a/js/ui/keyboard.js#L1213>
 * gnome-43: <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/d2cbd453077b3395d17ba91744d97550f43728d9/js/ui/keyboard.js#L1213>
 * gnome-42: <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/8dc0ca5eebdeda668418f02cd544b19589872fc6/js/ui/keyboard.js#L1174>
 * gnome-41: <https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/040a5d34d7a5601ad2a2f622fd9a393c5e08be5f/js/ui/keyboard.js#L1164>
