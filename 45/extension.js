@@ -17,7 +17,7 @@ export default class BlockCaribou {
     disable() {
         if (this._originalLastDeviceIsTouchscreen !== null) {
             KeyboardUI.KeyboardManager.prototype._lastDeviceIsTouchscreen = this._originalLastDeviceIsTouchscreen;
-            _originalLastDeviceIsTouchscreen = null;
+            this._originalLastDeviceIsTouchscreen = null;
         }
     }
 }
