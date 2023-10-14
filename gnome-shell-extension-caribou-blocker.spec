@@ -1,4 +1,4 @@
-%global gnome_version 44
+%global gnome_version 45
 %global uuid block-caribou-36@lxylxy123456.ercli.dev
 
 Name:        gnome-shell-extension-caribou-blocker
