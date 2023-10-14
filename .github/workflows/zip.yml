@@ -17,6 +17,7 @@ jobs:
           - '42'
           - '43'
           - '44'
+          - '45'
 
     steps:
     - uses: actions/checkout@v2
@@ -77,6 +78,12 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: 44.zip
+          path: .
+
+      - name: Download 45
+        uses: actions/download-artifact@v2
+        with:
+          name: 45.zip
           path: .
 
       - name: Bump version and push tag
@@ -169,3 +176,12 @@ jobs:
           asset_name: 44.zip
           asset_content_type: application/zip
 
+      - name: Release 45
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./45.zip
+          asset_name: 45.zip
+          asset_content_type: application/zip
