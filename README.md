@@ -57,6 +57,8 @@ There are a few possible solutions:
   Fedora 37 with gnome-shell-43.1 and Xorg
 * 4 Jun 2023: [44](44/) **PASS** on
   Fedora 38 with gnome-shell-44.0 and Xorg
+* 7 Nov 2023: [45](45/) **PASS** on
+  Fedora 39 with gnome-shell-45.0 and Xorg
 
 ## Change Log
 
@@ -81,6 +83,9 @@ There are a few possible solutions:
 
 ### [44](44/)
 * Update `shell-version` in `metadata.json`
+
+### [45](45/)
+* Rewrite by [@TheBrokenRail](https://github.com/TheBrokenRail) following <https://gjs.guide/extensions/upgrading/gnome-shell-45.html#esm>. See <https://github.com/lxylxy123456/cariboublocker/pull/4>
 
 ## Relevant Code
 
