@@ -18,6 +18,7 @@ jobs:
           - '43'
           - '44'
           - '45'
+          - '48'
 
     steps:
     - uses: actions/checkout@v2
@@ -26,7 +27,7 @@ jobs:
     - name: zip
       run: zip -j ${{ matrix.version }}.zip ${{ matrix.version }}/*
     - name: upload
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ matrix.version }}.zip
         path: ${{ matrix.version }}.zip
@@ -39,51 +40,57 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Download 3.36.3
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v5
         with:
           name: 3.36.3.zip
           path: .
 
       - name: Download 40.0
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v5
         with:
           name: 40.0.zip
           path: .
 
       - name: Download 40
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v5
         with:
           name: 40.zip
           path: .
 
       - name: Download 41
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v5
         with:
           name: 41.zip
           path: .
 
       - name: Download 42
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v5
         with:
           name: 42.zip
           path: .
 
       - name: Download 43
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v5
         with:
           name: 43.zip
           path: .
 
       - name: Download 44
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v5
         with:
           name: 44.zip
           path: .
 
       - name: Download 45
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v5
         with:
           name: 45.zip
+          path: .
+
+      - name: Download 48
+        uses: actions/download-artifact@v5
+        with:
+          name: 48.zip
           path: .
 
       - name: Bump version and push tag
@@ -184,4 +191,14 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./45.zip
           asset_name: 45.zip
+          asset_content_type: application/zip
+
+      - name: Release 48
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./48.zip
+          asset_name: 48.zip
           asset_content_type: application/zip
