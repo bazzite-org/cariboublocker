@@ -1,4 +1,4 @@
-%global gnome_version 45
+%global gnome_version 48
 %global uuid block-caribou-36@lxylxy123456.ercli.dev
 
 Name:        gnome-shell-extension-caribou-blocker
@@ -8,8 +8,8 @@ Summary:     Prevents caribou from appearing when you use a touchscreen with the
 
 Group:       User Interface/Desktops
 License:     GPLv2
-URL:         https://github.com/KyleGospo/cariboublocker/
-Source0:     https://github.com/KyleGospo/cariboublocker/archive/refs/heads/master.tar.gz
+URL:         https://github.com/bazzite-org/cariboublocker
+Source0:     %{url}/archive/refs/heads/master.tar.gz
 BuildArch:   noarch
 
 Requires:    gnome-shell >= 3.12
